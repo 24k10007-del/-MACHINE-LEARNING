@@ -1,4 +1,6 @@
 Ringkasan Preprocessing
+
+
 Dataset Secure IoT and WSN Sensor Data yang digunakan berasal dari Kaggle dan terdiri dari 1.000 baris serta 15 kolom, sehingga memenuhi ketentuan jumlah dataset yaitu 500–10.000 baris. Berdasarkan hasil audit schema, terdapat 14 fitur prediktor dan satu variabel target yaitu threat_level. Seluruh fitur telah memiliki tipe data numerik (float64 dan int64) sehingga tidak diperlukan konversi tipe data maupun encoding menggunakan One-Hot Encoding atau Ordinal Encoding.
 
 Hasil pemeriksaan menunjukkan bahwa dataset tidak memiliki missing value, sehingga proses imputasi tidak diperlukan. Pemeriksaan data duplikat juga dilakukan untuk memastikan tidak terdapat observasi yang berulang. Seluruh fitur numerik kemudian distandardisasi menggunakan StandardScaler melalui ColumnTransformer agar fitur yang memiliki satuan dan rentang nilai berbeda berada pada skala yang sebanding. Variabel threat_level tidak distandardisasi karena merupakan label target klasifikasi. Setelah seluruh tahap preprocessing selesai, dataset akhir tetap terdiri dari 1.000 baris dan 15 kolom dan disimpan dalam file dataset_clean.csv.
